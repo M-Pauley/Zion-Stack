@@ -9,11 +9,11 @@ High-level overview of concepts for a Fully-Managed Kubernetes on OpenStack Home
 Linux/OpenStack/Kubernetes/Infrastructure to support VMs and Containers on a small number of nodes with the potential to scale as-needed.  
 The stack should be easily deployable with minimal configuration editing, largely automated, and repeatable.  
 
-> Software Versions:
->> Ubuntu 22.04 LTS (Jammy)
->> MAAS 3.3.3 - Snap
->> Juju 2.9.43 - Snap
->> OpenStack 2023.1 (Antelope) - Charm Store
+- Software Versions:  
+    - Ubuntu 22.04 LTS (Jammy)  
+    - MAAS 3.3.3 - Snap  
+    - Juju 2.9.43 - Snap  
+    - OpenStack 2023.1 (Antelope) - Charm Store  
 
 ### Linux:
 
