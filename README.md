@@ -4,7 +4,7 @@ High-level overview of concepts for a Fully-Managed Kubernetes on OpenStack Home
 
 ---
 
-## Zion Cluster - LOKI.
+## Zion Cluster - The Stack.
 
 Linux/OpenStack/Kubernetes/Infrastructure to support VMs and Containers on a small number of nodes with the potential to scale as-needed.  
 The stack should be easily deployable with minimal configuration editing, largely automated, and repeatable.  
@@ -42,20 +42,30 @@ Overall, this should be a simple means to deploy a VM and container-based cloud 
 
 ### The Management Node  
 
-> Linux - Installed manually, configure with Go Task or Bash scripts.  
-> OpenStack - Control, Compute, Storage Node.  
-> Kubernetes - Control Node (Dashboard, DNS, Registry, etc.).  
-> Infrastructure - MaaS Server, Juju Controller.  
+- Linux - Installed manually, configure with Go Task or Bash scripts.  
+- OpenStack - Control, Compute, Storage Node.  
+- Kubernetes - Control Node (Dashboard, DNS, Registry, etc.).  
+- Infrastructure - MaaS Server, Juju Controller.  
 
 ### The Compute Nodes  
 
-> Linux - Provisioned and basic configuration by The Management Node.  
-> OpenStack - Compute, Storage Node.  
-> Kubernetes - Provisioned VM for WorkerNode.  
-> Infrastructure - Controlled by The Management Node.  
+- Linux - Provisioned and basic configuration by The Management Node.  
+- OpenStack - Compute, Storage Node.  
+- Kubernetes - Provisioned VM for WorkerNode.  
+- Infrastructure - Controlled by The Management Node.  
 
 ### The Network  
 
-> Uses Ubiquity UniFi Hardware.  
-> Configure VLANs for infrastructure, external, and internal networks.  
-> Preferrably configure bonded NICs for fault tolerance.
+- Uses Ubiquity UniFi Hardware.  
+- Configure VLANs for infrastructure, external, and internal networks.  
+- Preferrably configure bonded NICs for fault tolerance where possible/practical.  
+
+---
+
+## Zion Cluster - The Begining
+
+1. Setup the Workstation.  
+2. Install Host OS on the Compute Nodes.  
+3. Deploy OpenStack to the Compute Nodes.  
+4. Create OpenStack Virtual Machines and install k8s.  
+5. Deploy the payload :fireworks: (Kubernetes workload).  
