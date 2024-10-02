@@ -1,0 +1,24 @@
+apiVersion: v2
+name: my-app
+description: A Helm chart for deploying My Application
+type: application
+version: 1.0.0
+appVersion: "1.0"  # The version of the application being deployed
+keywords:
+  - kubernetes
+  - helm
+  - my-app
+home: https://example.com/my-app
+sources:
+  - https://github.com/my-org/my-app
+maintainers:
+  - name: Jane Doe
+    email: jane.doe@example.com
+icon: https://example.com/my-app-icon.png
+dependencies:
+  - name: common-library
+    version: 1.x.x
+    repository: https://charts.example.com/
+  - name: another-chart
+    version: 2.x.x
+    repository: https://another-charts.example.com/
