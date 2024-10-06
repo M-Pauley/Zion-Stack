@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: wordpress-app
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'   # Replace with your Kubernetes API server URL
+    namespace: default                        # Replace with your target namespace
+  project: default
+  source:
+    repoURL: 'https://github.com/M-Pauley/Zion-Stack.git/'
+    path: ./charts/wordpress
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

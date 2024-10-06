@@ -1,0 +1,13 @@
+apiVersion: v2
+name: my-app
+description: A Helm chart for deploying My Application
+type: application
+version: 1.0.3
+appVersion: "1.16.0"  # The version of the application being deployed
+keywords:
+  - kubernetes
+  - helm
+  - wordpress
+maintainers:
+  - name: Majid-dev
+    email: majid0karimi@gmail.com
